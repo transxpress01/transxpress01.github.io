@@ -8,14 +8,13 @@
         <a-scene embedded arjs="debugUIEnabled: false; sourceType: webcam" vr-mode-ui="enabled: false">
             <a-assets>
                 <a-asset-item id="helmet" src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/KhronosGroup/glTF-Sample-Models/master/2.0/SciFiHelmet/glTF/SciFiHelmet.gltf"></a-asset-item>
-				<video id="helmet_video" autoplay="true" loop crossorigin="anonymous" src="assets/helmet_video.mp4" webkit-playsinline playsinline controls muted></video>
+				<video id="helmet_video" autoplay="true" loop crossorigin="anonymous" src="assets/helmet_video.mp4"></video>
 			</a-assets>
 
             <!-- handle hiro marker -->
-            <a-marker preset="hiro">
-                <a-entity position="0 -1 0" scale="0.5 0.5 0.5" gltf-model="#helmet"></a-entity>
-                <a-video="src="#helmet_video" class="intersectable" width="1" height="1" position="0 0 0" rotation="0 0 0" color="#FFFFFF" transparent=False></a-video>
-            </a-marker>
+			<a-marker id="marker" preset="hiro">
+				<a-video src="#helmet_video" id="Video_0" class="intersectable" width="1" height="1" position="0 0 0" rotation="0 0 0" color="#FFFFFF" transparent=False></a-video>
+			</a-marker>
 			
             <!-- add a camera to the scene that renders the objects for us -->
             <a-entity camera></a-entity>
