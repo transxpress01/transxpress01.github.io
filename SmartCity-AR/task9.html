@@ -23,8 +23,8 @@
 		<!-- <a-sphere gps-entity-place="longitude:-6.2343797; latitude: 53.3431803" radius=2 color=red></a-sphere> -->
 		
 
-		<a-sphere gps-entity-place="latitude: 46.079363; longitude: 18.213624;"  radius=5 color=red></a-sphere>
-		<a-sphere gps-entity-place="latitude: 46.079319; longitude: 18.213610;"  radius=5 color=green></a-sphere>
+		<a-sphere look-at="[gps-camera]" gps-entity-place="latitude: 46.079363; longitude: 18.213624;"  radius=5 color=red></a-sphere>
+		<a-sphere look-at="[gps-camera]" gps-entity-place="latitude: 46.079319; longitude: 18.213610;"  radius=5 color=green></a-sphere>
 		
 		<a-camera id="camera" gps-camera gps-camera-position gps-camera-debug gps-camera-rotation rotation-reader></a-camera>
 	</a-scene>
