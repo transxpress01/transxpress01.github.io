@@ -21,9 +21,9 @@
 			</a-scene>-->
 			
 		<a-scene embedded arjs="debugUIEnabled: false; sourceType: webcam" vr-mode-ui="enabled: false">
-			<a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
+			<!--<a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>-->
 			<a-assets>
-				<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="assets/helmet_video.mp4" webkit-playsinline playsinline controls muted></video>
+				<video id="Video_Asset_0" autoplay="true" loop crossorigin="anonymous" src="assets/helmet_video.mp4" webkit-playsinline playsinline controls muted></video>
 			</a-assets>
 			<a-marker id="marker" preset="hiro" emitevents="true" button>
 				<a-video src="#Video_Asset_0" id="Video_0" class="intersectable" width="16" height="9" position="0 0 0" rotation="0 0 0" color="#FFFFFF" transparent=False></a-video>
