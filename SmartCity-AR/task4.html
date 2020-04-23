@@ -7,10 +7,10 @@
     <body style="margin : 0px; overflow: hidden;">			
 		<a-scene embedded arjs="debugUIEnabled: false; sourceType: webcam" vr-mode-ui="enabled: false">
 			<a-assets>
-				<video id="helmet_videos" autoplay="true" loop crossorigin="anonymous" src="assets/helmet_video.mp4" webkit-playsinline playsinline controls muted></video>
+				<video id="helmet_videos" autoplay="true" loop crossorigin="anonymous" src="assets/helmet_video.mp4" webkit-playsinline playsinline></video>
 				<a-asset-item id="helmet" src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/KhronosGroup/glTF-Sample-Models/master/2.0/SciFiHelmet/glTF/SciFiHelmet.gltf"></a-asset-item>
 			</a-assets>
-			<a-marker id="marker" preset="hiro" emitevents="true" button>
+			<a-marker id="marker" preset="hiro">
 				<a-entity position="0 -1 0" scale="0.5 0.5 0.5" gltf-model="#helmet"></a-entity>
 				<a-video src="#helmet_videos" id="Video_0" class="intersectable" width="1" height="1" position="0 0 0" rotation="0 0 0" color="#FFFFFF" transparent=False></a-video>
 			</a-marker>
