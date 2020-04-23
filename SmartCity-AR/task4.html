@@ -5,19 +5,30 @@
     + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <body style="margin : 0px; overflow: hidden;">
-        <a-scene embedded arjs="debugUIEnabled: false; sourceType: webcam" vr-mode-ui="enabled: false">
+        <!--<a-scene embedded arjs="debugUIEnabled: false; sourceType: webcam" vr-mode-ui="enabled: false">
             <a-assets>
                 <a-asset-item id="helmet" src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/KhronosGroup/glTF-Sample-Models/master/2.0/SciFiHelmet/glTF/SciFiHelmet.gltf"></a-asset-item>
 				<video id="helmet_video" autoplay="true" loop crossorigin="anonymous" src="assets/helmet_video.mp4"></video>
 			</a-assets>
 
-            <!-- handle hiro marker -->
+            <!-- handle hiro marker
 			<a-marker id="marker" preset="hiro">
 				<a-video src="#helmet_video" id="Video_0" class="intersectable" width="1" height="1" position="0 0 0" rotation="0 0 0" color="#FFFFFF" transparent=False></a-video>
 			</a-marker>
 			
-            <!-- add a camera to the scene that renders the objects for us -->
+            <!-- add a camera to the scene that renders the objects for us
             <a-entity camera></a-entity>
-        </a-scene>
+			</a-scene>-->
+			
+		<a-scene embedded arjs="debugUIEnabled: false; sourceType: webcam" vr-mode-ui="enabled: false">
+			<a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
+			<a-assets>
+				<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="assets/helmet_video.mp4" webkit-playsinline playsinline controls muted></video>
+			</a-assets>
+			<a-marker id="marker" preset="hiro" emitevents="true" button>
+				<a-video src="#Video_Asset_0" id="Video_0" class="intersectable" width="16" height="9" position="0 0 0" rotation="0 0 0" color="#FFFFFF" transparent=False></a-video>
+			</a-marker>
+		<a-entity camera></a-entity>
+  </a-scene>
     </body>
 </html>
